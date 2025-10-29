@@ -1,0 +1,192 @@
+/* --- Variables de Color y Fuentes --- */
+:root {
+    --primary-color: #E63946; /* Un rojo/coral llamativo */
+    --dark-bg: #1A1A1A;      /* Fondo principal oscuro */
+    --secondary-bg: #2B2B2B; /* Fondo para secciones */
+    --text-color: #F1FAEE;   /* Texto principal claro */
+    --text-muted: #A8DADC;   /* Texto secundario */
+}
+
+/* --- Reseteo Básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* --- Encabezado y Navegación --- */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto Parallax simple */
+    height: 100vh; /* Ocupa toda la pantalla */
+    color: white;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+}
+
+/* --- Botón de Llamada a la Acción (CTA) --- */
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block; /* Para que el margin-top funcione */
+}
+
+.cta-button:hover {
+    background-color: #d62839; /* Un rojo más oscuro */
+    transform: scale(1.05);
+}
+
+/* --- Sección Sobre Mí --- */
+.about-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.bio-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; /* Imagen de biografía circular */
+    border: 3px solid var(--primary-color);
+}
+
+/* --- Sección Eventos --- */
+.event-list {
+    list-style: none;
+}
+
+.event-list li {
+    padding: 10px;
+    border-bottom: 1px dashed var(--text-muted);
+}
+
+.event-list li strong {
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+/* --- Formulario de Contacto --- */
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    color: var(--text-muted);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+}
+
+.contact-form button {
+    border: none; /* Quitamos el borde del botón */
+    cursor: pointer;
+}
+
+/* --- Pie de Página --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #111;
+    margin-top: 40px;
+}
+
+.social-links a {
+    color: var(--text-muted);
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
